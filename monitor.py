@@ -7,11 +7,24 @@ import plotly.graph_objects as go
 import requests
 import os
 
+
 API_KEY = ''
 SECRET_KEY = ''
 ADDR = ''
 DB_NAME = ''
+
+def setup(key, secret, address, db):
+    global API_KEY, SECRET_KEY, ADDR, DB_NAME
+    API_KEY = key
+    SECRET_KEY = secret
+    ADDR = address
+    DB_NAME = db
+
+
 pull = lambda day: os.system(f"gsutil cp gs://{DB_NAME}/{day}.json data.json")
+
+
+
 def graph (symbol, date, time='00:00:00'):
   raw = datetime.fromisoformat(f'{date} {time}.000+00:00').timestamp()
   day = round(floor(raw, '1d').timestamp())
