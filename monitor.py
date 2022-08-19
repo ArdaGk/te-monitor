@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta, timezone
-from socket import SIO_KEEPALIVE_VALS
 from binance.spot import Spot
 import pandas as pd
 import numpy as np
