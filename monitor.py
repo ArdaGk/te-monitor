@@ -185,10 +185,7 @@ def worth():
       continue
   print('================')
   print(f'Total:\t${round(total,2)}')
-worth()
 
-
-worth()
 
 def portfolio ():
     for k, v in get('stats').items():
